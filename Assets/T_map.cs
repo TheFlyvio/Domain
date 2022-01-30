@@ -16,6 +16,15 @@ public class T_map : MonoBehaviour {
     //
     b = (T_building)new_instance(gameObject, building, 0.5f, 5.5f);
     b.vel_y = 0.01f;
+
+    Debug.Log(lib.speed_distribution(1, 0));
+    Debug.Log(lib.speed_distribution(1, 0));
+    Debug.Log(lib.speed_distribution(1, 0));
+    Debug.Log(lib.speed_distribution(1, 0));
+    Debug.Log(lib.speed_distribution(1, 0));
+    Debug.Log(lib.speed_distribution(1, 0));
+    Debug.Log(lib.speed_distribution(1, 0));
+    Debug.Log(lib.speed_distribution(1, 0));
   }
 
   private void FixedUpdate() {

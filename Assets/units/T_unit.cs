@@ -7,6 +7,9 @@ public class T_unit : T_piece {
   public long calls;
   public long last_calls;
   private long milliseconds;
+  public float target_x;
+  public float target_y;
+  public float move_angle;
   public float vel_x;
   public float vel_y;
 
@@ -28,6 +31,10 @@ public class T_unit : T_piece {
       last_calls = calls;
       calls = 0;
     }
+    //move_relative(vel_x, vel_y);
+  }
+
+  private void Update() {
     move_relative(vel_x, vel_y);
   }
 
