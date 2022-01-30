@@ -22,4 +22,7 @@ public class T_piece : MonoBehaviour {
     return lib.target_direction(transform.position, target_pos);
   }
 
+  public Vector2 speed_distribution(float speed, float direction) {
+    return lib.speed_distribution(speed, direction);
+  }
 }
