@@ -6,13 +6,13 @@ public class T_building : T_piece {
   public int spawn_rate;
   public long last_spawn;
   public GameObject[] prefab;
-  public float vel_x;
-  public float vel_y;
+  public float speed;
 
   override protected void Awake() {
     base.Awake();
     spawn_rate = 1000;
     last_spawn = lib.get_milliseconds();
+    speed = 0.1f;
   }
 
   override public void on_frame(int frame_no) {
@@ -23,9 +23,8 @@ public class T_building : T_piece {
 
   private void spawn() {
     last_spawn = lib.get_milliseconds();
-    T_unit instance = (T_unit)map.new_instance(gameObject, prefab[0], vel_x*10, vel_y*10);
-    instance.vel_x = vel_x;
-    instance.vel_y = vel_y;
+    T_unit instance = (T_unit)map.new_instance(gameObject, prefab[0], speed*10, speed*10);
+    instance.speed = speed;
   }
 
 }

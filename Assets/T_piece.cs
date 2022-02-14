@@ -18,4 +18,11 @@ public class T_piece : MonoBehaviour {
     map.move_piece(this, transform.localPosition.x+rx, transform.localPosition.y+ry);
   }
 
+  public float point_direction(Vector3 target_pos) {
+    return lib.target_direction(transform.position, target_pos);
+  }
+
+  public Vector2 speed_distribution(float speed, float direction) {
+    return lib.speed_distribution(speed, direction);
+  }
 }
