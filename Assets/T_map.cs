@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class T_map : MonoBehaviour {
   static private List<T_piece> list = new List<T_piece>();
+
+  public float map_width;
+  public float map_height;
   public bool fixedu;
   private int frame_n;
   public GameObject building;
